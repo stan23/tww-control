@@ -6,8 +6,8 @@
 	(paper "A4")
 	(title_block
 		(title "TWW - Trinkwarmwasser")
-		(date "2024-10-08")
-		(rev "1.0")
+		(date "2024-10-22")
+		(rev "1.1")
 		(comment 1 "CC BY-NC-SA 4.0")
 	)
 	(lib_symbols
@@ -2522,141 +2522,6 @@
 				)
 			)
 		)
-		(symbol "HLK-PMxx_1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -6.35 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "HLK-PMxx_1"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Hi-Link Mini AC-DC Switch Power Supply"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "HLK-PMxx_1_0_1"
-				(rectangle
-					(start -7.62 6.35)
-					(end 7.62 -6.35)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "HLK-PMxx_1_1_1"
-				(pin power_in line
-					(at -12.7 3.81 0)
-					(length 5.08)
-					(name "AC1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -12.7 -3.81 0)
-					(length 5.08)
-					(name "AC2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 12.7 3.81 180)
-					(length 5.08)
-					(name "Vo+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 12.7 -3.81 180)
-					(length 5.08)
-					(name "Vo-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Jumper:SolderJumper_3_Bridged12"
 			(pin_names
 				(offset 0) hide)
@@ -4383,9 +4248,8 @@
 				)
 			)
 		)
-		(symbol "Transistor_BJT:BC547"
-			(pin_names
-				(offset 0) hide)
+		(symbol "Transistor_FET:IRLML2060"
+			(pin_names hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -4398,7 +4262,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BC547"
+			(property "Value" "IRLML2060"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -4407,7 +4271,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -4418,8 +4282,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
-				(at 0 0 0)
+			(property "Datasheet" "https://www.infineon.com/dgdl/irlml2060pbf.pdf?fileId=5546d462533600a401535664b7fb25ee"
+				(at 5.08 -3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -4428,7 +4292,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "0.1A Ic, 45V Vce, Small Signal NPN Transistor, TO-92"
+			(property "Description" "1.2A Id, 60V Vds, 480mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4437,7 +4301,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "NPN Transistor"
+			(property "ki_keywords" "N-Channel HEXFET MOSFET"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4446,7 +4310,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?92*"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4455,10 +4319,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "BC547_0_1"
+			(symbol "IRLML2060_0_1"
 				(polyline
 					(pts
-						(xy 0 0) (xy 0.635 0)
+						(xy 0.254 0) (xy -2.54 0)
 					)
 					(stroke
 						(width 0)
@@ -4470,7 +4334,55 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
+						(xy 0.254 1.905) (xy 0.254 -1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 -1.27) (xy 0.762 -2.286)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 0.508) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 2.286) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 2.54) (xy 2.54 1.778)
 					)
 					(stroke
 						(width 0)
@@ -4482,7 +4394,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
+						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
 					)
 					(stroke
 						(width 0)
@@ -4494,10 +4406,10 @@
 				)
 				(polyline
 					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
 					)
 					(stroke
-						(width 0.508)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -4506,7 +4418,7 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
 					)
 					(stroke
 						(width 0)
@@ -4516,9 +4428,33 @@
 						(type outline)
 					)
 				)
+				(polyline
+					(pts
+						(xy 2.794 0.508) (xy 2.921 0.381) (xy 3.683 0.381) (xy 3.81 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(circle
-					(center 1.27 0)
-					(radius 2.8194)
+					(center 1.651 0)
+					(radius 2.794)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -4527,12 +4463,34 @@
 						(type none)
 					)
 				)
+				(circle
+					(center 2.54 -1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(circle
+					(center 2.54 1.778)
+					(radius 0.254)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
 			)
-			(symbol "BC547_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
+			(symbol "IRLML2060_1_1"
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "C"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4547,10 +4505,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
-					(length 5.08)
-					(name "B"
+				(pin passive line
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "S"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4566,9 +4524,9 @@
 					)
 				)
 				(pin passive line
-					(at 2.54 -5.08 90)
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "E"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4750,6 +4708,141 @@
 						)
 					)
 					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "myPowerModules:HLK-PMxx"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "HLK-PMxx"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Hi-Link Mini AC-DC Switch Power Supply"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "HLK-PMxx_0_1"
+				(rectangle
+					(start -7.62 6.35)
+					(end 7.62 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "HLK-PMxx_1_1"
+				(pin power_in line
+					(at -12.7 3.81 0)
+					(length 5.08)
+					(name "AC1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -12.7 -3.81 0)
+					(length 5.08)
+					(name "AC2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 12.7 -3.81 180)
+					(length 5.08)
+					(name "Vo-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 12.7 3.81 180)
+					(length 5.08)
+					(name "Vo+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5241,6 +5334,12 @@
 		)
 	)
 	(junction
+		(at 46.99 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "04662a6f-4cf2-438f-876a-4d6265c5d773")
+	)
+	(junction
 		(at 104.14 104.14)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5335,6 +5434,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a721332d-b179-45b1-b0b2-bf5e751770e7")
+	)
+	(junction
+		(at 152.4 161.29)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "aa871c45-07a4-498c-a11f-47d86781c439")
 	)
 	(junction
 		(at 97.79 170.18)
@@ -5464,7 +5569,7 @@
 	)
 	(polyline
 		(pts
-			(xy 93.98 163.83) (xy 93.98 182.88)
+			(xy 93.98 162.56) (xy 93.98 182.88)
 		)
 		(stroke
 			(width 0)
@@ -5904,7 +6009,7 @@
 	)
 	(polyline
 		(pts
-			(xy 93.98 163.83) (xy 107.95 163.83)
+			(xy 93.98 162.56) (xy 107.95 162.56)
 		)
 		(stroke
 			(width 0)
@@ -6384,7 +6489,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 184.15) (xy 40.64 184.15)
+			(xy 30.48 184.15) (xy 36.83 184.15)
 		)
 		(stroke
 			(width 0)
@@ -6401,16 +6506,6 @@
 			(type default)
 		)
 		(uuid "7ee02a5b-3a81-456f-97a2-8a391b4bb169")
-	)
-	(wire
-		(pts
-			(xy 153.67 161.29) (xy 156.21 161.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "805ce606-707d-45b4-84cc-301b2074ce87")
 	)
 	(wire
 		(pts
@@ -6444,7 +6539,7 @@
 	)
 	(polyline
 		(pts
-			(xy 107.95 163.83) (xy 107.95 182.88)
+			(xy 107.95 162.56) (xy 107.95 182.88)
 		)
 		(stroke
 			(width 0)
@@ -6504,7 +6599,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 184.15) (xy 50.8 184.15)
+			(xy 44.45 184.15) (xy 46.99 184.15)
 		)
 		(stroke
 			(width 0)
@@ -6521,6 +6616,16 @@
 			(type default)
 		)
 		(uuid "8fba600b-3df3-4297-bdfc-3d0e7dc88b0c")
+	)
+	(wire
+		(pts
+			(xy 46.99 184.15) (xy 50.8 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8ff91b73-df6a-4247-add0-7d31e8b15331")
 	)
 	(wire
 		(pts
@@ -6794,7 +6899,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 166.37) (xy 163.83 167.64)
+			(xy 163.83 166.37) (xy 163.83 168.91)
 		)
 		(stroke
 			(width 0)
@@ -6891,6 +6996,16 @@
 			(type default)
 		)
 		(uuid "bf0a1519-e91a-45b8-a3af-9ac575c505f7")
+	)
+	(wire
+		(pts
+			(xy 149.86 161.29) (xy 152.4 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c034b87b-bf3c-4775-80eb-00df44c5fb8b")
 	)
 	(wire
 		(pts
@@ -6994,7 +7109,7 @@
 	)
 	(wire
 		(pts
-			(xy 135.89 161.29) (xy 146.05 161.29)
+			(xy 135.89 161.29) (xy 142.24 161.29)
 		)
 		(stroke
 			(width 0)
@@ -7034,7 +7149,17 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 189.23) (xy 58.42 190.5)
+			(xy 152.4 161.29) (xy 156.21 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d4d1c956-9ab3-4070-9677-22dfcaf1d59d")
+	)
+	(wire
+		(pts
+			(xy 58.42 189.23) (xy 58.42 191.77)
 		)
 		(stroke
 			(width 0)
@@ -7435,6 +7560,16 @@
 		)
 		(uuid "39954968-8f6d-4f30-a6bf-30427f2e3b5a")
 	)
+	(text "ADC max 1.0 V"
+		(exclude_from_sim no)
+		(at 197.866 50.546 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4461b6c8-782b-4d06-8efb-5a2c72afb3d6")
+	)
 	(text "3V3 1A"
 		(exclude_from_sim no)
 		(at 139.7 67.31 0)
@@ -7667,7 +7802,7 @@
 		(uuid "39223d00-9d5a-4952-901e-0052fc1db152")
 	)
 	(label "RX"
-		(at 250.19 143.51 0)
+		(at 250.19 146.05 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -7689,7 +7824,7 @@
 		(uuid "3daad829-6423-4232-ab7d-61dab86c560e")
 	)
 	(label "TX"
-		(at 250.19 146.05 0)
+		(at 250.19 143.51 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -8530,6 +8665,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_FET:IRLML2060")
+		(at 161.29 161.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "14f3a5c2-4bcd-4bf1-b863-8ff29467ae95")
+		(property "Reference" "Q1"
+			(at 167.64 160.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRLML6344"
+			(at 167.64 162.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
+			(at 166.37 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IRLML6344-DataSheet-v01_01-EN.pdf"
+			(at 166.37 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.2A Id, 60V Vds, 37mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
+			(at 161.29 161.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "57a53d16-67ea-4a4b-87a6-3c8a5892ed0c")
+		)
+		(pin "2"
+			(uuid "95638fae-5fa9-4b56-a222-f9480121e911")
+		)
+		(pin "3"
+			(uuid "e2b49835-b877-4305-b83d-23421e7a47ab")
+		)
+		(instances
+			(project ""
+				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
+					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 255.27 158.75 0)
 		(unit 1)
@@ -8792,82 +9003,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC547")
-		(at 161.29 161.29 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1b948e80-6371-4458-a820-7e0d91cb38ba")
-		(property "Reference" "Q1"
-			(at 166.1414 160.4553 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC547"
-			(at 166.1414 162.9922 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 166.37 163.195 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
-			(at 161.29 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 161.29 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "64ec0f5f-27ec-4e2a-bc5b-aa403981db41")
-		)
-		(pin "2"
-			(uuid "183a014a-bce4-4c09-9781-8de061b7cf29")
-		)
-		(pin "3"
-			(uuid "37338d75-297f-4b07-afb3-5fb5383870bb")
-		)
-		(instances
-			(project "tww"
-				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Regulator_Linear:AMS1117-3.3")
 		(at 137.16 58.42 0)
 		(unit 1)
@@ -9002,6 +9137,76 @@
 			(project "tww"
 				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 152.4 165.1 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2480ab71-ef38-49b0-ade7-a95a82b79a07")
+		(property "Reference" "R15"
+			(at 154.94 163.8299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 154.94 166.3699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 154.178 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 152.4 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "577a2af2-c9a3-4727-9abb-c08b4a932b76")
+		)
+		(pin "2"
+			(uuid "c5187958-1893-46e8-8bc9-5e4940719e6b")
+		)
+		(instances
+			(project "tww"
+				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -9978,24 +10183,23 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 44.45 184.15 90)
+		(at 40.64 184.15 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "41351bbf-64c5-4af2-8390-6f1d7ff704fc")
 		(property "Reference" "R4"
-			(at 44.45 179.4342 90)
+			(at 40.64 179.07 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1k?"
-			(at 44.45 181.9711 90)
+		(property "Value" "300"
+			(at 40.64 181.356 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10003,7 +10207,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 44.45 185.928 90)
+			(at 40.64 185.928 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10012,7 +10216,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 44.45 184.15 0)
+			(at 40.64 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10021,7 +10225,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 44.45 184.15 0)
+			(at 40.64 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10608,6 +10812,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 46.99 187.96 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60a409f6-43ee-4706-97aa-64881ca05299")
+		(property "Reference" "R16"
+			(at 49.53 186.6899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10k"
+			(at 49.53 189.2299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 48.768 187.96 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 46.99 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96c6db51-5484-450b-8a58-c3669e149298")
+		)
+		(pin "2"
+			(uuid "f9309583-a28d-4e08-8786-0fe4dc3dac5d")
+		)
+		(instances
+			(project "tww"
+				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 31.75 88.9 0)
 		(unit 1)
@@ -10668,6 +10942,71 @@
 			(project "tww"
 				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
 					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "64765a16-e88c-4533-9b60-3301e9dc13f3")
+		(property "Reference" "#PWR030"
+			(at 152.4 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.4 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1353da92-8e19-465f-8bcf-2c913168a144")
+		)
+		(instances
+			(project "tww"
+				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -11365,82 +11704,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:BC547")
-		(at 55.88 184.15 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7cd32d84-6fa8-4a83-bb16-2061b75585fd")
-		(property "Reference" "Q2"
-			(at 60.7314 183.3153 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "BC547"
-			(at 60.7314 185.8522 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-92_Inline"
-			(at 60.96 186.055 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC550-D.pdf"
-			(at 55.88 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 55.88 184.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "372c7b14-edfa-426b-858b-caf9f0d52af8")
-		)
-		(pin "2"
-			(uuid "5e5f1f08-5b23-43ec-ad01-cc8e03f6378a")
-		)
-		(pin "3"
-			(uuid "46306a0f-28e2-46fc-bd00-e509667e478f")
-		)
-		(instances
-			(project "tww"
-				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:Varistor")
 		(at 97.79 175.26 0)
 		(unit 1)
@@ -11644,6 +11907,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 46.99 191.77 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "846e154a-19c5-4639-bde5-5cbbedd8a457")
+		(property "Reference" "#PWR035"
+			(at 46.99 198.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 46.99 196.2134 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 46.99 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 46.99 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "71b279fd-2f2f-4291-ad2a-59f1c220d4a5")
+		)
+		(instances
+			(project "tww"
+				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 40.64 90.17 0)
 		(unit 1)
@@ -11707,6 +12036,82 @@
 			(project "tww"
 				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:IRLML2060")
+		(at 55.88 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a4a0183-9daa-4f70-b7a3-c09c92d4f239")
+		(property "Reference" "Q2"
+			(at 62.23 182.8799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "IRLML6344"
+			(at 62.23 185.4199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23_Handsoldering"
+			(at 60.96 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.infineon.com/dgdl/Infineon-IRLML6344-DataSheet-v01_01-EN.pdf"
+			(at 60.96 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "1.2A Id, 60V Vds, 37mOhm Rds, N-Channel HEXFET Power MOSFET, SOT-23"
+			(at 55.88 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b1dc128-b92d-45c0-b427-a532b33c722b")
+		)
+		(pin "2"
+			(uuid "772507f8-0c60-4a4b-b8d6-a856567818f9")
+		)
+		(pin "3"
+			(uuid "02dce228-ffe7-45c6-8255-fa201deeeffb")
+		)
+		(instances
+			(project "tww"
+				(path "/9538e4ed-27e6-4c37-b989-9859dc0d49e8"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -11983,24 +12388,23 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 149.86 161.29 90)
+		(at 146.05 161.29 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "9ab03e4a-b8ce-49ce-b628-fd0370897987")
 		(property "Reference" "R3"
-			(at 149.86 156.5742 90)
+			(at 146.05 156.464 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "1k?"
-			(at 149.86 159.1111 90)
+		(property "Value" "300"
+			(at 146.05 158.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12008,7 +12412,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 149.86 163.068 90)
+			(at 146.05 163.068 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12017,7 +12421,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 149.86 161.29 0)
+			(at 146.05 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12026,7 +12430,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.86 161.29 0)
+			(at 146.05 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12548,7 +12952,7 @@
 		(fields_autoplaced yes)
 		(uuid "a8e9d866-2896-4e7c-8a7a-142673ce988a")
 		(property "Reference" "R13"
-			(at 165.608 140.1353 0)
+			(at 166.37 139.6999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12556,8 +12960,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k?"
-			(at 165.608 142.6722 0)
+		(property "Value" "560"
+			(at 166.37 142.2399 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12750,7 +13154,7 @@
 		(fields_autoplaced yes)
 		(uuid "b3f80ca2-eb19-4ba9-9987-e24cf26e0407")
 		(property "Reference" "R14"
-			(at 60.198 162.9953 0)
+			(at 60.96 162.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12758,8 +13162,8 @@
 				(justify right)
 			)
 		)
-		(property "Value" "1k?"
-			(at 60.198 165.5322 0)
+		(property "Value" "560"
+			(at 60.96 165.0999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13152,7 +13556,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 58.42 190.5 0)
+		(at 58.42 191.77 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13161,7 +13565,7 @@
 		(fields_autoplaced yes)
 		(uuid "c2d60ba5-6c3f-4ab1-9f8f-94d5df19e6b6")
 		(property "Reference" "#PWR023"
-			(at 58.42 196.85 0)
+			(at 58.42 198.12 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13170,7 +13574,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 58.42 194.9434 0)
+			(at 58.42 196.2134 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13178,7 +13582,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 190.5 0)
+			(at 58.42 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13187,7 +13591,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 190.5 0)
+			(at 58.42 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13196,7 +13600,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 58.42 190.5 0)
+			(at 58.42 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13754,7 +14158,6 @@
 		)
 	)
 	(symbol
-		(lib_name "HLK-PMxx_1")
 		(lib_id "myPowerModules:HLK-PMxx")
 		(at 128.27 31.75 0)
 		(unit 1)
@@ -13797,7 +14200,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Hi-Link Mini AC-DC Switch Power Supply"
 			(at 128.27 31.75 0)
 			(effects
 				(font
@@ -14376,7 +14779,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 163.83 167.64 0)
+		(at 163.83 168.91 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14384,7 +14787,7 @@
 		(dnp no)
 		(uuid "e458593f-6aa5-42b2-9056-3cb489a57bd7")
 		(property "Reference" "#PWR020"
-			(at 163.83 173.99 0)
+			(at 163.83 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14393,7 +14796,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 163.83 172.72 0)
+			(at 163.83 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14401,7 +14804,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 163.83 167.64 0)
+			(at 163.83 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14410,7 +14813,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 163.83 167.64 0)
+			(at 163.83 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14419,7 +14822,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 163.83 167.64 0)
+			(at 163.83 168.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14458,7 +14861,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Flow|NTC"
+		(property "Value" "NTC|Flow"
 			(at 77.978 111.76 0)
 			(effects
 				(font

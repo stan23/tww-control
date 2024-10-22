@@ -60,12 +60,20 @@
         }
       ],
       "drc_exclusions": [
-        "courtyards_overlap|120210001|65450001|f7bb6dd8-be37-4d99-8249-ec14654754f9|c72fcd80-1de6-44b7-a66e-ef16a209414f",
+        "courtyards_overlap|120210001|65450001|c72fcd80-1de6-44b7-a66e-ef16a209414f|f7bb6dd8-be37-4d99-8249-ec14654754f9",
         "courtyards_overlap|128789999|69500001|6ee2eff6-d2ee-43b3-a39c-023a759b20f4|c72fcd80-1de6-44b7-a66e-ef16a209414f",
         "courtyards_overlap|129289999|84300001|afa81dbf-1d19-4d13-85d9-6f57cc013431|d60ee6ad-5508-4033-91ca-1337fb1b7a0d",
+        "lib_footprint_mismatch|124500000|53000000|f28e56e7-283b-4b9a-ae27-95e89770fbf8|00000000-0000-0000-0000-000000000000",
         "lib_footprint_mismatch|124500000|63750000|37aab2ca-ad90-43f6-b15d-deb29ccf1609|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|124750000|71700000|6ee2eff6-d2ee-43b3-a39c-023a759b20f4|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|125000000|86500000|afa81dbf-1d19-4d13-85d9-6f57cc013431|00000000-0000-0000-0000-000000000000",
         "lib_footprint_mismatch|135000000|50000000|f30950ae-bb58-4863-a80c-8483e47e446a|00000000-0000-0000-0000-000000000000",
-        "lib_footprint_mismatch|148500000|63500000|269da77f-6615-43dd-bbfe-488660cd3a2f|00000000-0000-0000-0000-000000000000"
+        "lib_footprint_mismatch|148500000|63500000|269da77f-6615-43dd-bbfe-488660cd3a2f|00000000-0000-0000-0000-000000000000",
+        "silk_overlap|127240000|84420000|af06ce4b-2df5-4288-9410-daa02c29db28|85f8900a-46af-4b9f-8cd5-a9c9d057e1ca",
+        "silk_overlap|163850000|49250000|ea2ea877-1ce1-4cd6-ad19-1da87f51601d|282c8e53-3acc-42f0-a92a-6aa976b97a93",
+        "silk_overlap|166250000|79350000|db1ed10a-ef86-43bf-93dc-9be76327f6d2|e70d061b-28f0-4421-ad15-0598604086e8",
+        "silk_overlap|167750000|85650000|92848721-49b5-4e4c-b042-6fd51e1d562f|8bd46048-cab7-4adf-af9a-bc2710c1894c",
+        "silk_overlap|170150000|47750000|f699494a-77d6-4c73-bd50-29c1c1c5b879|83c5181e-f5ee-453c-ae5c-d7256ba8837d"
       ],
       "meta": {
         "version": 2
@@ -76,7 +84,7 @@
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
-        "courtyards_overlap": "error",
+        "courtyards_overlap": "warning",
         "diff_pair_gap_out_of_range": "error",
         "diff_pair_uncoupled_length_too_long": "error",
         "drill_out_of_range": "error",
